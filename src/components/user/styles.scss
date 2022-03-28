@@ -1,0 +1,38 @@
+@import '../../styles/vars.scss';
+
+.header__user {
+  display: flex;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+
+  &--name {
+    line-height: 40px;
+  }
+}
+
+.dropdownmenu {
+  position: absolute;
+  display: none;
+  min-width: 100px;
+  right: 10px;
+  margin-top: 10px;
+  background-color: $secondHeaderColor;
+  border-bottom: 1px solid $headerShadowColor;
+
+  animation-name: openSubmenu;
+  animation-duration: 1s;
+
+  &__opened {
+    display: block;
+  }
+
+  &:hover {
+    display: block;
+  } 
+
+  &__item {
+    padding: 5px 20px;
+    text-align: end;
+  }
+}

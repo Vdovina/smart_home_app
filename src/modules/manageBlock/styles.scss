@@ -1,0 +1,12 @@
+.manage-block-wrapper {
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+
+.manage-block {
+  margin: 10px;
+
+  button:not(:last-child) {
+    margin-bottom: 5px;
+  } 
+}

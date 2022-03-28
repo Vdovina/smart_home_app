@@ -1,0 +1,26 @@
+@import '../../styles/vars.scss';
+
+.feed-wrapper {
+  margin: 10px;
+}
+
+.feed {
+
+  &__header {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__news {
+    display: flex;
+    margin: 1px 0;
+    padding: 10px;
+    border: 1px solid $headerColor;
+    border-radius: 4px;
+
+    &--author {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/vars.scss';
+
+.auth-page-wrapper {
+  width: 50vw;
+  margin: 0 auto;
+
+  @media (max-width:760px) {
+    width: 100%;
+  }
+}
+
+.auth-page {
+  h1 {
+    text-align: center;
+  }
+}
+
+.button__submit {
+  margin: 30px auto 0;
+  padding: 10px 30px;
+  background-color: $buttonColor;
+  color: $buttonLabelColor;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+}
