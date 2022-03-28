@@ -3,7 +3,7 @@ import InputMask from "react-input-mask";
 import "./styles.scss";
 
 function TextInput(props) {
-  const { label, mask, value, onChange } = props;
+  const { label, mask, placeholder, value, onChange } = props;
 
   return (
     <div className="input-wrapper">
@@ -12,6 +12,7 @@ function TextInput(props) {
         className="input"
         value={value}
         mask={mask}
+        placeholder={placeholder}
         onChange={(e) => onChange(e.currentTarget.value)}
       />
     </div>

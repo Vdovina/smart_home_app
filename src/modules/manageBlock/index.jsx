@@ -7,8 +7,7 @@ function ManageBlock() {
     <div className="manage-block-wrapper">
       <div className="manage-block">
         <Button label="Управление освещением" />
-        <Button label="Микроклимат" />
-        <Button label="Счётчики" />
+        <Button label="Показания приборов" />
         <Button label="Просмотр бытовых приборов" />
       </div>
     </div>

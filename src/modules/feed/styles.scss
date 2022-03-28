@@ -5,6 +5,9 @@
 }
 
 .feed {
+  height: 80vh;
+  overflow-y: scroll;
+  @include scrollStyle($mainColor, 8px);
 
   &__header {
     font-size: 20px;
@@ -15,7 +18,7 @@
     display: flex;
     margin: 1px 0;
     padding: 10px;
-    border: 1px solid $headerColor;
+    border: 1px solid $mainColor;
     border-radius: 4px;
 
     &--author {

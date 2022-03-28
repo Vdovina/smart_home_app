@@ -1,8 +1,30 @@
-$headerColor: indianred;
+$mainColor: #9090be;
+
+$headerColor: $mainColor;
 $secondHeaderColor: white;
 $headerShadowColor: rgba(174, 174, 220, 0.4);
 
-$buttonColor: indianred;
+$buttonColor: $mainColor;
 $buttonLabelColor: white;
 
 $inputBorderColor: rgba(174, 174, 220, 0.4);
+
+
+@mixin scrollStyle($color: $mainColor, $width: 4px) {
+
+  &::-webkit-scrollbar {
+    width: $width * 2;
+  }
+  &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: $width;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-left: $width solid $color;
+  }
+  /* stylelint-disable */
+  scrollbar-width: thin;
+  scrollbar-color: $color transparent;
+  padding: 0 2px;
+  /* stylelint-enable */
+}

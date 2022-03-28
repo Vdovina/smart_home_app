@@ -19,6 +19,7 @@ function AuthPage() {
             value={phoneValue}
             label="Введите номер телефона"
             mask="+7 (999) 999-99-99"
+            placeholder="+7 (999) 999-99-99"
             onChange={(value) => setPhoneValue(value)}
           />
           <TextInput
