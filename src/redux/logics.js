@@ -4,10 +4,8 @@ import { API_ROUTES } from "../constants/routes";
 
 export const getNews = async() => {
   const { dispatch } = store;
-  // debugger;
   dispatch(fetchNews());
 
-  // debugger;
   try {
     const data = await fetch(API_ROUTES.GET_NEWS)
     .then(response => (response.json()))
@@ -15,9 +13,25 @@ export const getNews = async() => {
       console.log('!', data)
       return data;
     });
-    dispatch(fetchNewsSuccessed(data));
+    debugger;
+    dispatch(fetchNewsSuccessed(data['news']));
   }
   catch (e) {
     dispatch(fetchNewsFailed(e));
+  }
+}
+
+export const sendNews = async(data) => {
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }
+  const res = await fetch(API_ROUTES.SEND_NEWS, requestOptions);
+  debugger;
+
+  if (res.ok) {
+    const news = await res.json();
+    fetchTodoSuccessed(todo.todos);
   }
 }

@@ -13,3 +13,9 @@ body {
   display: flex;
   align-items: center;
 }
+
+@media (max-width:760px) {
+  .col {
+    display: block;
+  }
+}

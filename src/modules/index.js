@@ -1,5 +1,6 @@
 import ManageBlock from "./manageBlock";
 import Feed from "./feed";
 import AuthPage from "./auth";
+import Chat from "./chat";
 
-export { ManageBlock, Feed, AuthPage };
+export { ManageBlock, Feed, AuthPage, Chat };

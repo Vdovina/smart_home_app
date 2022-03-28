@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { useSelector } from "react-redux";
-import News from "./news";
+import News from "./message";
+import SendPanel from "./sendPanel";
 import "./styles.scss";
 
 function Feed() {
@@ -14,7 +15,10 @@ function Feed() {
         {(!feedData || feedData.news.length === 0) && <div>Новостей нет</div>}
         {feedData &&
           feedData.length !== 0 &&
-          feedData.news.map((item) => <News data={item} />)}
+          feedData.news.map((item) => <News key={item.id} data={item} />)}
+      </div>
+      <div className="feed__send-panel--wrapper">
+        <SendPanel />
       </div>
     </div>
   );

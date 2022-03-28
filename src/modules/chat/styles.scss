@@ -1,0 +1,39 @@
+@import '../../styles/vars.scss';
+
+.message-wrapper {
+  width: 50vw;
+  margin: 0 auto;
+
+  .message-block {
+    margin: 5px;
+  }
+}
+
+.chats-block-wrapper {
+  width: 70%;
+  margin: 10px auto;
+  height: 80vw;
+  border: 1px solid;
+
+  .chats-block {
+    margin: 5px 5px;
+  }
+}
+
+.button__send {
+  width: 50%;
+  height: 40px;
+  margin: 30px auto 0;
+  padding: 10px 30px;
+  background-color: $buttonColor;
+  color: $buttonLabelColor;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
