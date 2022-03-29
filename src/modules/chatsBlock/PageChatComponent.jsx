@@ -8,7 +8,7 @@ function PageChatComponent(props) {
     const chatName = chatId === 2? "Чат с управляющим" : "Общий чат";
     return (
         <div>
-            <h1>{chatName}</h1>
+            <h3>{chatName}</h3>
             <ChatComponent chatId={chatId}></ChatComponent>
         </div>
     );

@@ -17,27 +17,24 @@ function App({ isAuthenticated, authenticate }) {
   if (isAuthenticated)
     return (
       <div className="app-body">
+        <Header />
         <Routes>
           <Route
             path='/' exact
             element={(
-              <>
-                <Header />
-                <div className="col">
-                  <Feed />
-                  <ManageBlock />
-                </div>
-              </>
-            )}
-          />
-            <Route
-            path="/chats"
-            element={(
-              <div>
-                <Header />
-                <ChatComponent />
+              <div className="col">
+                <Feed />
+                <ManageBlock />
               </div>
             )}
+          />
+          <Route
+            path="/publicChat"
+            element={<ChatComponent chatId={1} />}
+          />
+          <Route
+            path="/privateChat"
+            element={<ChatComponent chatId={2} />}
           />
           <Route
             path="*"
