@@ -18,3 +18,8 @@ export const addNews = (data) => ({
   type: ACTIONS.ADD_NEWS,
   payload: data,
 })
+
+export const authenticate = (isAuthenticated) => ({
+  type: ACTIONS.AUTHENTICATE,
+  payload: isAuthenticated,
+});

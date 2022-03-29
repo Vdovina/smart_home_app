@@ -2,19 +2,15 @@ import React, { useState } from "react";
 import { TextInput, MaskedInput } from "../../components";
 import "./styles.scss";
 
-function AuthPage() {
+function AuthPage(props) {
   const [phoneValue, setPhoneValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
-
-  const onSubmit = () => {
-    // send data
-  };
 
   return (
     <div className="auth-page-wrapper">
       <div className="auth-page">
         <h1>Добро пожаловать в нашу систему</h1>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={props.onSubmit}>
           <MaskedInput
             value={phoneValue}
             label="Введите номер телефона"

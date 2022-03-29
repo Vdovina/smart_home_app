@@ -11,7 +11,7 @@
 
 .chats-component-block-wrapper {
   width: 600px;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 20px;
   height: 600px;
   border: 2px solid $buttonColor;
@@ -35,7 +35,7 @@
   background-color: $buttonColor;
   color: $buttonLabelColor;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   align-self: flex-end;
 

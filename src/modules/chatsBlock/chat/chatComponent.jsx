@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import MessageComponent from "./message";
+import MessageComponent from "../../chat/message.jsx";
 import { TextInput } from "../../../components";
 import "./styles.scss";
 
@@ -32,7 +32,8 @@ function ChatComponent(props) {
       </div>
       <TextInput
           value={message}
-          onChange={(value) => setMessageValue(value)}></TextInput>
+          onChange={(value) => setMessageValue(value)}>
+      </TextInput>
       <input className="button__send" value="Отправить" type="submit" onClick={onSubmit}/>
     </div>
   );

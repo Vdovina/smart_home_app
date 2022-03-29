@@ -1,32 +1,78 @@
 import React, { useEffect } from "react";
-import { Provider } from "react-redux";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
-import { useRoutes } from './hooks/routes';
-
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { connect } from "react-redux";
+import { authenticate } from "./redux/actions";
 import { Header } from "./components";
-import { ManageBlock, Feed, AuthPage, Chat } from "./modules";
+import { ManageBlock, Feed, AuthPage, ChatComponent } from "./modules";
 import { getNews } from "./redux/logics";
-
 import "./styles/styles.css";
 
-function App({ store }) {
-  const isAuthenticated = true;
+function App({ isAuthenticated, authenticate }) {
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     // getNews();
   }, []);
 
-  return (
-    <div className="app-body">
-      {/* <AuthPage /> */}
-      <Header />
-      <div className="col">
-        <Feed />
-        <ManageBlock />
+  if (isAuthenticated)
+    return (
+      <div className="app-body">
+        <Routes>
+          <Route
+            path='/' exact
+            element={(
+              <>
+                <Header />
+                <div className="col">
+                  <Feed />
+                  <ManageBlock />
+                </div>
+              </>
+            )}
+          />
+            <Route
+            path="/chats"
+            element={(
+              <div>
+                <Header />
+                <ChatComponent />
+              </div>
+            )}
+          />
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          /> 
+        </Routes>
       </div>
-      {/* <Chat /> */}
-    </div>
+    )
+
+  return (
+    <Routes>
+      <Route path="/login" element={(
+        <div className="app-body">
+          <AuthPage 
+          onSubmit={() => {
+            authenticate(true);
+            navigate('/')
+            }}
+          />
+        </div>
+      )} />
+      <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+      /> 
+    </Routes>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  isAuthenticated: state.isAuthenticated,
+});
+
+const mapDispathToProps = {
+  authenticate,
+}
+
+export default connect(mapStateToProps, mapDispathToProps)(App);

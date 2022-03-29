@@ -17,9 +17,9 @@ function Feed() {
           feedData.length !== 0 &&
           feedData.news.map((item) => <News key={item.id} data={item} />)}
       </div>
-      <div className="feed__send-panel--wrapper">
+      {/* <div className="feed__send-panel--wrapper">
         <SendPanel />
-      </div>
+      </div> */}
     </div>
   );
 }
