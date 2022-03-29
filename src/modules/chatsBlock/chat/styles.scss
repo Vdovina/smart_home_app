@@ -1,0 +1,52 @@
+@import '../../../styles/vars.scss';
+
+.message-wrapper {
+  width: 50vw;
+  display: inline;
+
+  .message-block {
+    margin: 5px;
+  }
+}
+
+.chats-component-block-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 600px;
+  border: 2px solid $buttonColor;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chats-component-block {
+  position: relative;
+  margin: 5px 5px;
+  width: 100%;
+}
+
+.button__send {
+  width: 95%;
+  height: 60px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  background-color: $buttonColor;
+  color: $buttonLabelColor;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  align-self: flex-end;
+
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.input-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  align-self: center;
+  padding: 5px 5px;
+}
+
