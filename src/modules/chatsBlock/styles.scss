@@ -1,0 +1,12 @@
+.chats-block-wrapper {
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+
+.chats-block {
+  margin: 10px;
+
+  button:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
